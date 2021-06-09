@@ -11,7 +11,6 @@ public class Pyramid {
         this.pharaoh = pharaoh ; 
         this.modern_name = modern_name;
         this.site = site ;
-        // try to put it into try and cath for the missing data in csv
         this.height = height ;
        }
 
