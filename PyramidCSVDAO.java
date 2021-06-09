@@ -28,16 +28,23 @@ public class PyramidCSVDAO {
                 fields[fieldidx] = fields[fieldidx].trim();
                 
             }
-            Pyramid pyramida = new Pyramid(fields[0],fields[1],fields[2],Double.parseDouble(fields[3]));
-            pyramids.add(pyramida);
+            if(fields[7] != null && !fields[7].isEmpty())
+            {
+                Pyramid pyramida = new Pyramid(fields[0],fields[2],fields[4],Double.parseDouble(fields[7]));
+                pyramids.add(pyramida);
+            }
+            else
+            {
+                Pyramid pyramida = new Pyramid(fields[0],fields[2],fields[4],0);
+                pyramids.add(pyramida);
+            }
         }
         System.out.println("Total Number of pyramids is : "+pyramids.size());
         return pyramids;
     }
      
 
-        }
+}
     
     
     
-
